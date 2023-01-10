@@ -10,6 +10,7 @@
     <h1>Rocketseat - Ignite - ReactJS - Projeto 01 - Anotações</h1>
 
     <h2>Iniciando com React</h2>
+
     <h3>Introdução</h3>
     <p>
       Construir um projeto prático em React com os principais conceitos como
@@ -81,6 +82,24 @@
       Assim podemos reaproveitar o HTML e o CSS dos componentes alterando
       somente o conteúdo via propriedades, podemos usar esse mecanismo para
       outros elementos.
+    </p>
+
+    <h2>Estrutura da Aplicação</h2>
+
+    <h3>CSS Modules</h3>
+    <p>
+      Overview do projeto, será um feed com posts e comentários. Copiamos o
+      layout para nossa conta do figma e desenvolvemos o header. Pra fazer a
+      importação do css usamos diretamente os arquivos em JSX e não mais pelo
+      HTML. Precisamos tomar cuidado com o escopo atrelado ao componente quando
+      estilizamos no react. Se estilizarmos somente o post por exemplo, não
+      queremos que isso afete os demais, para isso usamos os CSS modules
+      (extensão module.css nos arquivos). Detalhe: é importante utilizarmos os
+      componentes com inicial maiúscula para não confundirmos com as tags HTML.
+      Da forma como fizemos no projeto podemos usar a tag HTML header novamente
+      em outros lugares da aplicação sem que essa sofra o efeito de estilização
+      das configurações específicas de cada componente, por isso é gerada a hash
+      do module.css.
     </p>
   </body>
 </html>
