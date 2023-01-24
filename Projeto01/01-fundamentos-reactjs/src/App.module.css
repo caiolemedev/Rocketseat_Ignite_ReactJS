@@ -8,3 +8,13 @@
   gap: 2rem;
   align-items: flex-start; /*coloca os elemetos no topo do seu espaço disponível e evita que o browser tente esticar o sidebar para atingir o tamanho do feed*/
 }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%; /*usando percentual para não alterar a responsividade do usuário*/
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
