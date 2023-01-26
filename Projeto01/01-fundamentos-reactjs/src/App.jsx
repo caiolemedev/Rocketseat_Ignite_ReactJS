@@ -7,6 +7,46 @@ import { Sidebar } from './components/Sidebar'
 import './global.css'
 import styles from './App.module.css'
 
+// author: { avatar_url: "", name: "", role: "",  }
+// publishedAt: Date
+// content: ""
+
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: "https://github.com/caiolemedev.png",
+      name: "Caio Leme",
+      role: "Developer"
+    },
+    content: [
+      { type: 'paragraph', content: 'Fala galeraa 👋'},
+      { type: 'paragraph', contet: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare.'},
+      { type: 'link', content: 'jane.design/doctorcare'},
+      { type: 'link', content: '#novoprojeto'},
+      { type: 'link', content: '#nlw'},
+      { type: 'link', content: '#rocketseat'},
+    ],
+    publishedAt: new Date('2023-01-05 19:00'),
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl: "https://github.com/maykbrito.png",
+      name: "Mayk Brito",
+      role: "Educator"
+    },
+    content: [
+      { type: 'paragraph', content: 'Fala galeraa 👋'},
+      { type: 'paragraph', contet: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare.'},
+      { type: 'link', content: 'jane.design/doctorcare'},
+      { type: 'link', content: '#novoprojeto'},
+      { type: 'link', content: '#nlw'},
+      { type: 'link', content: '#rocketseat'},
+    ],
+    publishedAt: new Date('2023-01-20 19:00'),
+  }
+];
 
 export function App() {
   const [count, setCount] = useState(0)
@@ -20,14 +60,15 @@ export function App() {
           <Sidebar />
         </aside>
         <main>
-          <Post 
-            author="Caio Leme" 
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iure reprehenderit eaque quidem excepturi suscipit natus, amet officiis, aut nemo aspernatur labore ullam illo unde quo dolorum consequatur qui rem."
-          />
-          <Post
-            author="José Silva"
-            content="Um post muito legal!!" 
-          />
+          {posts.map(post => {
+            return (
+              <Post 
+                author={post.author}
+                content={post.content}
+                publishedAt={post.publishedAt}
+              />
+            )
+          })}
         </main>
       </div>
     </div>
