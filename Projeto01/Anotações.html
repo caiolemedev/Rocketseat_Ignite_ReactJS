@@ -224,5 +224,16 @@
       os formatos que queremos. Também usamos o map para percorrer o array e
       exibir o conteúdo do post.
     </p>
+
+    <h3>Estado (useState)</h3>
+    <p>
+      Usando o conceito de estado para adicionar comentários nos posts, fazemos
+      uso também do spread operator para que a função de atualização do estado
+      do array de comentários sejá acrescido de um novo valor sempre que
+      clickarmos em publicar. Ponto importante é que como a função de publicação
+      de comentários foi feita dentro do componente post o seu funcionamento
+      será "escopado", ou seja, não será propagados para outros componentes,
+      tornando os comentários dos dois posts independentes.
+    </p>
   </body>
 </html>
