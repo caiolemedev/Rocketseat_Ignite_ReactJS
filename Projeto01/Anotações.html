@@ -244,5 +244,20 @@
       programação declarativa para fazer com que a textarea sempre tenha o valor
       do estado do newCommentText assim não usamos nada de imperativo no código.
     </p>
+
+    <h3>Entendendo a key</h3>
+    <p>
+      A key é uma propriedade interna do react que deve ser única para cada
+      elemento de uma lista, que no caso são as estruturas de repetição (ex:
+      map). No caso, devem ser únicas dentro do contexto de cada elemento, por
+      exemplo duas linhas de posts diferentes com mesma key é ok. Não há
+      problema em utilizar texto grande ou conteúdo, mas é melhor usar id. A key
+      é importante para quando um componente pai for renderizado novamente e
+      isso desencadeia para os filhos, o react usa a key para localizar e
+      acelerar o processo de renderização. Não é recomendado usar o índice do
+      array como key pois mudanças de posição podem causar erros na aplicação.
+      Mesmo com atualização de tela, remoção, alteração de posição, adição o
+      valor da key não pode mudar.
+    </p>
   </body>
 </html>
