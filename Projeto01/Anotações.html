@@ -278,5 +278,16 @@
       comments. Assim criamos uma nova lista sem o comentário a ser deletado e
       usamos a função citada para atualizar o valor dos comentários.
     </p>
+
+    <h3>Validando o formulário</h3>
+    <p>
+      Primeiramente bloqueamos que usuário possa publicar um comentário sem
+      texto usando a propriedade required da textarea. Na sequência usamos a
+      verificação de formulários para exibir um alerta personalizado solicitando
+      o preenchimento do campo. E por fim bloqueamos o botão usando a
+      propriedade disable para quando o comprimento do texto dentro da textarea
+      for zero. Usamos clean code com uma variável externa para facilitar a
+      manutenção.
+    </p>
   </body>
 </html>
