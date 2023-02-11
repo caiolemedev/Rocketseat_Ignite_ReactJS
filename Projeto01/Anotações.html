@@ -289,5 +289,15 @@
       for zero. Usamos clean code com uma variável externa para facilitar a
       manutenção.
     </p>
+
+    <h3>Realizando likes nos comentários</h3>
+    <p>
+      Usamos um estado para guardar o valor dos likes e colocamos ma função
+      extra para atualizar os estados. Um conceito importante apresentado na
+      aula é que no react precisamos passar a função, e não a execução da mesma
+      nos comantos, por exemplo onClick. Se passarmos a execução o react entrará
+      em looping. Para contornar esse erro podemos usar uma arrow function, mas
+      por manutenção não é recomendado.
+    </p>
   </body>
 </html>
