@@ -299,5 +299,21 @@
       em looping. Para contornar esse erro podemos usar uma arrow function, mas
       por manutenção não é recomendado.
     </p>
+
+    <h3>Entendendo closures no React</h3>
+    <p>
+      Usando o exemplo dos likes, se adicionarmos várias vezes a função
+      setLikeCount dentro da função de like o número de likes continuará subindo
+      de 1 em 1 e não será adicionado o tanto de atualizações de estado que
+      colocamos dentro da função. Isso ocorre pois o React cria uma nova versão
+      do componente quando atualizamos o estado, portanto numa mesma função de
+      atualização de estado o estado anterior será o mesmo, ou seja, todos os
+      valores de like estão zerados. Portanto não podemos usar um estado
+      atualizado logo na sequência da sua atualização, ou seja, dentro da mesma
+      função. Para solucionar podemos criar uma nova variável dentro da função,
+      mas também podemos passar uma arrow function acessando o valor mais
+      recente da variável. O React permite essa utilização e cria uma espécie de
+      "fila" de atualização (verificar o código para exemplo).
+    </p>
   </body>
 </html>
