@@ -166,5 +166,12 @@
       defaultValues, basta incluirmos em nossa função handle de submit do
       formulário.
     </p>
+
+    <h2>Funcionalidades da aplicação</h2>
+
+    <h3>Iniciando novo ciclo</h3>
+    <p>
+      Criamos uma interface de ciclo e um estado de array de ciclos para salvarmos as informações inseridas pelos usuários. Para o id, usamos a data com getTime e o constructor de String para termos um valor único em milisegundos. Adicionalmente, para setarmos o estado de ciclos usamos a arrow function chamando o estado atual, pois sua atualização depende dele. Podemos salvar a informação do ciclo ativo no próprio ciclo junto as demais infos, mas isso geraria uma cadeia de operações na atualização e trocas de ciclo muito grandes, já criando um estado novo com o id do ciclo ativo nos permite mais agilidade, somente temos que atentar que o valor pode ser null pois quando se inicia a aplicação não existe um ciclo ativo.
+    </p>
   </body>
 </html>
