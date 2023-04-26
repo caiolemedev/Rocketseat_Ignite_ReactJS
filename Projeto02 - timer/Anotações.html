@@ -171,12 +171,44 @@
 
     <h3>Iniciando novo ciclo</h3>
     <p>
-      Criamos uma interface de ciclo e um estado de array de ciclos para salvarmos as informações inseridas pelos usuários. Para o id, usamos a data com getTime e o constructor de String para termos um valor único em milisegundos. Adicionalmente, para setarmos o estado de ciclos usamos a arrow function chamando o estado atual, pois sua atualização depende dele. Podemos salvar a informação do ciclo ativo no próprio ciclo junto as demais infos, mas isso geraria uma cadeia de operações na atualização e trocas de ciclo muito grandes, já criando um estado novo com o id do ciclo ativo nos permite mais agilidade, somente temos que atentar que o valor pode ser null pois quando se inicia a aplicação não existe um ciclo ativo.
+      Criamos uma interface de ciclo e um estado de array de ciclos para
+      salvarmos as informações inseridas pelos usuários. Para o id, usamos a
+      data com getTime e o constructor de String para termos um valor único em
+      milisegundos. Adicionalmente, para setarmos o estado de ciclos usamos a
+      arrow function chamando o estado atual, pois sua atualização depende dele.
+      Podemos salvar a informação do ciclo ativo no próprio ciclo junto as
+      demais infos, mas isso geraria uma cadeia de operações na atualização e
+      trocas de ciclo muito grandes, já criando um estado novo com o id do ciclo
+      ativo nos permite mais agilidade, somente temos que atentar que o valor
+      pode ser null pois quando se inicia a aplicação não existe um ciclo ativo.
     </p>
 
     <h3>Criando countdown</h3>
     <p>
-      Criando e manipulando as variáveis necessárias para apresentar o countdown em tela.
+      Criando e manipulando as variáveis necessárias para apresentar o countdown
+      em tela.
+    </p>
+
+    <h3>O hook useEffect</h3>
+    <p>
+      useEffect vem de side-effect que significa efeito colateral, ou seja, uma
+      ação que ocorre por uma outra ação. Exemplo de adição de um novo item numa
+      lista, a ação principal é adicionar o item na lista, mas podemos ter um
+      side-effect de avisar uma API que se comunica com um sistema terceiro.
+      Podemos fazer isso através de uma função dentro da função de atualização,
+      mas isso gera um problema com as clousures do react e não teríamos as
+      informações mais atualizadas da lista. Para isso podemos usar o useEffect
+      que irá monitorar uma variável e quando alterada irá executar uma função e
+      dentro do useEffect os valores da lista já estarão atualizados. Ele
+      executa também na primeira vez que o componente é exibido em tela,
+      portanto temos que tomar cuidado com essa condição e talvez colocar um
+      filtro. Podemos usar o array de dependências do useEffect vazio para que
+      ele execute a função apenas 1x na primeira renderização do componente, por
+      exemplo buscar dados numa API. Precisamos tomar cuidado também para não
+      exagerar no uso do useEffect e fazer atualizações de estado internamente
+      dele, gerando uma renderização dupla no código, nestes casos o melhor
+      cenário é verificar se o "estado" pode ser convertido em variável e
+      simplesmente ser calculada a cada nova renderização.
     </p>
   </body>
 </html>
