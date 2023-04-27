@@ -210,5 +210,16 @@
       cenário é verificar se o "estado" pode ser convertido em variável e
       simplesmente ser calculada a cada nova renderização.
     </p>
+
+    <h3>Reduzindo o countdown</h3>
+    <p>
+      Usamos o useEffect para monitorar o ciclo atual e atualizar o countdown
+      via função setAmountSecondsPassed e a função differenceInSeconds da
+      biblioteca date-fns para contar os segundos que passam mais precisamente.
+      Adicionamos no useEffect a variável que estamos monitorando, que é o
+      activeCycle, mas isso gera alguns bugs como por exemplo, ter 2 ciclos
+      ativos ao mesmo tempo, pois o useEffect será executado sempre que
+      atualizarmos o valor do activeCycle. Resolveremos isso na próxima aula.
+    </p>
   </body>
 </html>
