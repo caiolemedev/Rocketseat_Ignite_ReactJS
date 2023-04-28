@@ -221,5 +221,17 @@
       ativos ao mesmo tempo, pois o useEffect será executado sempre que
       atualizarmos o valor do activeCycle. Resolveremos isso na próxima aula.
     </p>
+
+    <h3>Mudando o title da página</h3>
+    <p>
+      O useEffect permite configurar o seu retorno, que é uma função que permite
+      resetar alguma variável ou parâmetro antes de executar o novo useEffect,
+      resolvendo assim o bug de dois activeCycle juntos. Precisamos resetar
+      também a variável que guarda quantos segundos se passaram quando criamos
+      um novo ciclo para que o countdown inicie do valor cheio e não reaproveite
+      os segundos passados do ciclo anterior. Inserimos também a função de
+      mostrar o countdown no titulo da aba, para o caso de quando usarmos outra
+      página enquanto rodamos o ciclo.
+    </p>
   </body>
 </html>
