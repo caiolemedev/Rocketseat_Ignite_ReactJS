@@ -233,5 +233,18 @@
       mostrar o countdown no titulo da aba, para o caso de quando usarmos outra
       página enquanto rodamos o ciclo.
     </p>
+
+    <h3>Interromper o ciclo</h3>
+    <p>
+      Para interromper o ciclo criamos um novo botão para quando temos o ciclo
+      ativo e também bloqueamos os inputs. Assim o usuário não pode interir
+      nenhum texto quando temos um ciclo ativo. Na sequência criamos a função de
+      reset do ciclo usando o map na função setCycles que altera a variável que
+      guardamos todas as informações de todos os ciclos para selecionarmos
+      somente o ciclo com id igual ao ciclo ativo, os demais são retornados como
+      original. Isso respeita a imutabilidade do react. Precisamos também setar
+      o valor do ciclo ativo para null, resetando e informando toda a aplicação
+      que não existe mais nenhum ciclo ativo.
+    </p>
   </body>
 </html>
