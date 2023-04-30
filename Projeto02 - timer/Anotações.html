@@ -246,5 +246,16 @@
       o valor do ciclo ativo para null, resetando e informando toda a aplicação
       que não existe mais nenhum ciclo ativo.
     </p>
+
+    <h3>Ciclo completo</h3>
+    <p>
+      No useEffect de atualização do amountSecondsPassed precisamos incluir a
+      lógica para salvar a informação do ciclo quando é completado. Para isso
+      criamos um if usando a diferença de tempo que se passou contra o total se
+      segundos do ciclo até chegarmos no final e salvamos num parâmetro opcional
+      a data de finalização. O arco else será executado quando ainda não atingiu
+      o total e será reduzido. No if precisamos também zerar a diferença do
+      último segundo mostrado e resetar o intervalo.
+    </p>
   </body>
 </html>
