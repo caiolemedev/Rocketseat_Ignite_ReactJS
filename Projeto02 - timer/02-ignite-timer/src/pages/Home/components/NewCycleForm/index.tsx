@@ -2,6 +2,14 @@ import { FormContainer, MinutesAmountInput, TaskInput } from './styles'
 
 export function NewCycleForm() {
   return (
+    const { register, handleSubmit, watch, reset } = useFormseForm<NewCycleFormData>({
+      resolver: zodResolver(newCycleFormValidationSchema),
+      defaultValues: {
+        task: '',
+        minutesAmount: 0,
+      },
+    })
+
     <FormContainer>
       <label htmlFor="task">Vou trabalhar em</label>
       <TaskInput

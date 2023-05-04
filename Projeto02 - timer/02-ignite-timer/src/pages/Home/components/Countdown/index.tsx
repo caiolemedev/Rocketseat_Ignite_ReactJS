@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import { CountdownContainer, Separator } from './styles'
 
 export function Countdown() {
   return (
+    const [amountSecondsPassed, setAmountSecondsPassed] = useStateState(0)
+
     <CountdownContainer>
       <span>{minutes[0]}</span>
       <span>{minutes[1]}</span>
