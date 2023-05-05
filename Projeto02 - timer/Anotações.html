@@ -257,5 +257,24 @@
       o total e será reduzido. No if precisamos também zerar a diferença do
       último segundo mostrado e resetar o intervalo.
     </p>
+
+    <h3>Separando componentes</h3>
+    <p>
+      Aula dedicada a separar os componentes countdown e newcycleform da home
+    </p>
+
+    <h3>Prop Drilling no React</h3>
+    <p>
+      Continuando a separação notamos que informações precisam ser
+      compartilhadas entre os componentes e com a home. A comunicação dos
+      componentes começa a ficar complexa e de certa forma confusa. Para fazer
+      com os componentes se comunicarem normalmente usamos a passagem de
+      propriedadesentre eles, mas no caso temos muitas propriedades de
+      comunicação que acaba tornando o código somente mais confuso. Mas podemos
+      usar outra forma de comunicação entre os componentes que é a Context API,
+      que permite compartilhamento de informações entre vários componentes ao
+      mesmo tempo, usa uma forma de informações globais e quando modificadas
+      independente de quem modificou, atualiza todos os componentes.
+    </p>
   </body>
 </html>
