@@ -276,5 +276,32 @@
       mesmo tempo, usa uma forma de informações globais e quando modificadas
       independente de quem modificou, atualiza todos os componentes.
     </p>
+
+    <h2>Contexto no React</h2>
+
+    <h3>Etendendo contextos</h3>
+    <p>
+      A context API é uma maneira de compartilhar as propriedades entre os
+      componentes da aplicação. Iniciamos sua aplicação usando a função
+      creatContext do react para criar um contexto relacionado às variáveis que
+      estamos tratando e setando os seus valores iniciais, normalmente via
+      objeto para guardar todas as informações que queremos compartilhar. Para
+      compartilhar usamos o hook useContext dentro dos componentes passando o
+      nome do contexto que criamos e atribuindo os valores a cada variável. Mas
+      quando criamos um contexto com uma informação inicial não conseguimos
+      alterar a informação via componentes, mas podemos usar um estado e este
+      sim será alterado, mas ele precisa ser criado no componente mais externo
+      dos componentes que irão compartilhar a informação. Para que as alterações
+      funcionem precisamos adicionar um contexto por volta dos componentes que
+      precisam compartilhar a informação, usamos o nome do contexto seguido de
+      .Provider e nele setamos os valores desejados como objeto, que se
+      sobressaem sobre o valor original do contexto. Para alterar o estado
+      dentro dos componentes precisamos passar também a função setVariável
+      dentro do objeto do contexto, mas para isso dentro do contexto alteramos o
+      objeto para vazio e colocamos o tipo any, assim não temos erro no TS.
+      Assim conseguimos acessar a função de set dentro dos componentes para
+      alterar o estado e ela será repassada para todos os outros componentes que
+      estão usando o mesmo contexto.
+    </p>
   </body>
 </html>
