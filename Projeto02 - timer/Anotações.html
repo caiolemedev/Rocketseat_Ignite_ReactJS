@@ -303,5 +303,15 @@
       alterar o estado e ela será repassada para todos os outros componentes que
       estão usando o mesmo contexto.
     </p>
+
+    <h3>Convertendo para contexto</h3>
+    <p>
+      Começamos a criar o contexto da aplicação compartilhando o activeCycle e o
+      activeCycleId, mas também adicionamos uma nova função
+      markCurrentCycleAsFinished. Essa nova função é criada no componente Home
+      pois depende da função setCycles que só existe nele, mas é compartilhada
+      com os demais componentes. Assim simplificamos a tipagem do nosso contexto
+      para uma função que não tem parâmetro e nem retorno.
+    </p>
   </body>
 </html>
