@@ -313,5 +313,17 @@
       com os demais componentes. Assim simplificamos a tipagem do nosso contexto
       para uma função que não tem parâmetro e nem retorno.
     </p>
+
+    <h3>Contexto no formulário</h3>
+    <p>
+      Usamos um contexto específico do react para o form pois precisamos passar
+      para o componente NewCycleForm a função register, para isso criamos uma
+      variável que irá guardar as funções do newCycleForm na home e
+      desestruturamos logo abaixo para podermos usar as funções específicas. No
+      provedor de contexto de formulário usamos o spread para adicionarmos as
+      propridades do nosso formulário de uma única vez via variável criada. Na
+      sequência atualizamos o componente NewCycleForm para importar e utilizar a
+      função register.
+    </p>
   </body>
 </html>
