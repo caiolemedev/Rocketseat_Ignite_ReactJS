@@ -325,5 +325,19 @@
       sequência atualizamos o componente NewCycleForm para importar e utilizar a
       função register.
     </p>
+
+    <h3>Contexto entre rotas</h3>
+    <p>
+      Não conseguimos acessar o contexto na página do histórico pois estamos
+      envolvendo apenas os componentes da Home sendo eles o NewCycleForm e o
+      Countdown. Mas a página de histórico também precisa das informações. Para
+      resolver este problema criamos um componente de Contexto para prover as
+      informações para todas as rotas e colocamos ele por fora das rotas no
+      arquivo App. Um ponto importante é que ao fazer isso o Router passar a ser
+      uma children do novo componente, isso é uma propriedade particular do
+      React que devemos adicionar via interface e desestruturação e incorporar
+      no novo componente onde desejamos renderiza-la. Já realizamos a importação
+      do contexto na página de histórico também.
+    </p>
   </body>
 </html>
