@@ -359,5 +359,21 @@
       Usando a biblioteca date-fns formatamos a data de início para termos a
       informação de quanto tempo faz que iniciamos o ciclo.
     </p>
+
+    <h2>Reducers</h2>
+
+    <h3>Criando reducers no ciclo</h3>
+    <p>
+      Usado para armazenar estados mais complexos, similar ao useState. Usado na
+      alteração do stado atual quando usamos muitos cálculos ou lógicas
+      complexas, nele conseguimos abstrair cada passo do código. No Reducer
+      declaramos duas variáveis, uma função que recebe o estado no seu valor
+      atual e uma action, que será a ação que será executada em cima do estado,
+      e o outro parâmetro é o valor inicial do estado. No lugar de usarmos o
+      setVariável usamos o dispatch e passamos duas informações como objeto, uma
+      variável (payload) e um valor (type) para a action. Isso fará com que seja
+      possível agregar todas as alterações que precisam ser feitas no estado e
+      permite seleciona-las via action type.
+    </p>
   </body>
 </html>
