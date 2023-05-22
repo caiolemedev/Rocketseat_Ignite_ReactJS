@@ -398,5 +398,13 @@
       chamar os métodos. Usamos um enum, que é basicamente um dicionário de
       todas as ações que temos disponíveis.
     </p>
+
+    <h3>Separando Actions</h3>
+    <p>
+      Abstraindo as chamadas das actions restringimos as opções de envio de
+      parâmetros no payload, pois a princípio podemos enviar qualquer valor que
+      o reducer não irá validar. Assim quando quisermos usar uma das ações basta
+      chamar o dispatch executando a função correspondente.
+    </p>
   </body>
 </html>
