@@ -413,5 +413,24 @@
       mutaveis em estados do react, que são imutáveis. Assim simplificamos a
       lógicas das actions retirando os maps dos estados.
     </p>
+
+    <h3>Salvando estado no storage</h3>
+    <p>
+      Podemos salvar nosso estado no local storage do navegador, mas ele só
+      aceita textos, estão usamos o JSON stringfy. Sempre colocar no nome da
+      item do local storage com o prefixo do nome da aplicação, pois corremos o
+      risco de sobescrevermos o item caso estejamos trabalhando com várias
+      aplicações. Adicionar também a versão da informação que estamos salvando
+      para limitar os possíveis bugs. Quando recuperamos as informações do local
+      storage temos um problema com o formato da data ser uma string, isso
+      acontece pois o JSON não aceita nenhum formato além de string e numeros,
+      para resolver corrigimos no Countdown colocando um new Date por vonta do
+      mostrador. Podemos otimizar o contador para não perdermos 1s durante a
+      atualização da página simplesmente setando o amountSecondsPassed através
+      de uma função que verificar se existe ou não um ciclo ativo. Caso o
+      usuário não tenha nenhuma informação no storage devemos retornar o valor
+      do initialState, que é o segundo parâmetro do reducer onde criamos o array
+      de ciclos vazio e o activeCycle como null.
+    </p>
   </body>
 </html>
